@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+    --pading:20px;
+    --margin: 15px;
+    --border-radius: 10pc;
+    --color:lightpink;
+    --width: 50px;
+}
+.alls{
+    display: flex;
+    justify-content: center;
+}
+#all{
+    padding: 15px; width: 340px;
+    background-color: aqua;
+}
+#first{
+    display: flex;
+    position: relative;
+    right: 25px;
+}
+#first div{
+    width: 50px;height: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 3.9rem;
+    margin-inline-start: 35px;
+    border-radius: 10pc;
+    background-color: darkgrey;
+}
+#second{
+    display: flex;
+    position: relative;
+    right: 15px;
+}
+#second div{
+    width: 50px; height: 70px;
+    text-align: center;
+    line-height: 4rem;
+    border-radius: var(--border-radius);
+}
+#times{
+    position: relative;
+    left: 130px;
+    margin-top: var(--margin);
+    background-color: red;
+}
+#nine{
+    position: relative;
+    left: 100px;
+    margin-top: 10px;
+    background-color: var(--color);
+
+}
+#eight{
+    position: relative;
+    left: 65px;
+    margin-top: 10px;
+    background-color: var(--color);
+
+}
+#seven{
+    position: relative;
+    left: 30px;
+    margin-top: 10px;
+    background-color: var(--color);
+
+}
+#third{
+    display: flex;
+    position: relative;
+    left: 10px;
+}
+#third div{
+    width: 50px; height: 70px;
+    text-align: center;
+    line-height: 4rem;
+    border-radius: var(--border-radius);
+}
+#miners{
+    position: relative;
+    left: 105px;
+    margin-top: var(--margin);
+    background-color: red;
+}
+#six{
+    position: relative;
+    left: 77px;
+    margin-top: 10px;
+    background-color: var(--color);
+
+}
+#five{
+    position: relative;
+    left: 43px;
+    background-color: var(--color);
+    margin-top: 10px;
+}
+#four{
+    position: relative;
+    left: 9px;
+    background-color: var(--color);
+    margin-top: 10px;
+}
+#fourth{
+    display: flex;
+}
+#fourth div{
+    width: 50px; height: 70px;
+    text-align: center;
+    line-height: 4rem;
+    border-radius: var(--border-radius);
+}
+#plus{
+    position: relative;
+    left: 115px;
+    margin-top: 10px;
+    background-color: red;
+
+}
+#three{
+    position: relative;
+    left: 90px;
+    background-color: var(--color);
+    margin-top: 10px;
+}
+#two{
+    position: relative;
+    left: 55px;
+    background-color: var(--color);
+    margin-top: 10px;
+}
+#one{
+    position: relative;
+    left: 20px;
+    background-color: var(--color);
+    margin-top: 10px;
+}
+
+#fiveth{
+    display: flex;
+}
+#fiveth div{
+    padding: var(--pading);
+    margin: var(--margin);
+    border-radius: var(--border-radius);
+}
+#equal{
+     position: relative;
+    left: 9px;
+    margin-top: 10px;
+    background-color: red;
+}
+#double{
+     position: relative;
+    left: 15px;
+    margin-top: 10px;
+    background-color: darkcyan;
+}
+#zero{
+     position: relative;
+    left: 14px;
+    margin-top: 10px;
+    background-color: darkcyan;
+}
+#bracket{
+     position: relative;
+    left: 9px;
+    margin-top: 10px;
+    background-color: burlywood;
+}
+    </style>
+
+</head>
+<body>
+<div class="alls">
+        <div id="all">
+        <div id="tx">
+    <textarea name="number" id="texta" cols="40" rows="7"></textarea>
+        </div>
+    <div id="first">
+        <div id="clear">C</div>
+        <div id="delate">del</div>
+        <div id="parce">%</div>
+        <div id="devide">/</div>
+    </div>
+    <div id="second">
+        <div id="seven">7</div>
+        <div id="eight">8</div>
+        <div id="nine">9</div>
+        <div id="times">*</div>
+    </div>
+
+    <div id="third">
+        <div id="four">4</div>
+        <div id="five">5</div>
+        <div id="six">6</div>
+        <div id="miners">-</div>
+    </div>
+
+    <div id="fourth">
+        <div id="one">1</div>
+        <div id="two">2</div>
+        <div id="three">3</div>
+        <div id="plus">+</div>
+    </div>
+
+    <div id="fiveth">
+        <div id="bracket">()</div>
+        <div id="zero">0</div>
+        <div id="double">00</div>
+        <div id="equal">=</div>
+    </div>
+
+    </div>
+</div>
+
+
+<script>
+    let texta = document.getElementById("texta")
+    let clear = document.getElementById("clear")
+    clear.addEventListener("click",e=>{
+        texta.value = ""
+    })
+
+    let del = document.getElementById("delate")
+    del.addEventListener("click",e=>{
+        texta.value = texta.value.slice(0,-1)
+    })
+    let equal = document.getElementById("equal")
+    equal.addEventListener("click",e=>{
+        texta.value = texta.value + " = " +  eval(texta.value)
+    })
+
+    let seven = document.getElementById("seven")
+    seven.addEventListener("click",(e)=>{
+        texta.value += 7
+    })
+
+    let module = document.getElementById("parce")
+    module.addEventListener("click",e=>{
+        texta.value += " % "
+    })
+
+    let devide = document.getElementById("devide")
+    devide.addEventListener("click",e=>{
+        texta.value += " / "
+    })
+
+    let nane = document.getElementById("eight")
+    nane.addEventListener('click',e=>{
+        texta.value += "8"
+    })
+
+    let tisa = document.getElementById("nine")
+    tisa.addEventListener('click',e=>{
+        texta.value += "9"
+    })
+
+    let times = document.getElementById('times')
+    times.addEventListener('click',e=>{
+        texta.value += " * "
+    })
+
+    let nne = document.getElementById('four')
+    nne.addEventListener('click', e=>{
+        texta.value += '4'
+    })
+    let tano = document.getElementById('five')
+    tano.addEventListener('click',e=>{
+        texta.value += "5"
+    })
+
+    let sita = document.getElementById('six')
+    sita.addEventListener("click",e=>{
+        texta.value += "6"
+    })
+
+    let miners = document.getElementById("miners")
+    miners.addEventListener('click',e=>[
+        texta.value += " - "
+    ])
+
+    let one = document.getElementById("one")
+    one.addEventListener('click',e=>{
+        texta.value += "1"
+    })
+
+    let two = document.getElementById("two")
+    two.addEventListener('click', e=>{
+        texta.value += '2'
+    })
+
+    let three = document.getElementById('three')
+    three.addEventListener('click',e=>{
+        texta.value += "3"
+    })
+
+    let plus = document.getElementById("plus")
+    plus.addEventListener('click',e=>{
+        texta.value += " + "
+    })
+
+    let bracket = document.getElementById("bracket")
+    bracket.addEventListener('click',e=>{
+        texta.value += '()'
+    })
+    bracket.addEventListener("focus",e=>{
+        e.target.value = bracket
+    })
+
+    let zero = document.getElementById("zero")
+    zero.addEventListener('click',e=>{
+        texta.value += "0"
+    })
+
+    let double = document.getElementById('double')
+    double.addEventListener("click",e=>{
+        texta.value += "00"
+    })
+
+</script>
+
+</body>
+</html>
